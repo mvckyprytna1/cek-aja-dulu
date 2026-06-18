@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Jasa | Cek Aja Dulu</title>
+    <meta name="description" content="Katalog jasa dan layanan pilihan: service harian, teknisi, hingga bantuan profesional. Cek dulu, cocokkan, lalu hubungi Vicky tanpa tekanan.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="jasa.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/jasa/jasa.html" class="nav-brand">
+                <span class="logo-text">Jasa</span>
+                <span class="logo-sub">by Cek Aja Dulu</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Beranda</a>
+                <a href="../properti/properti.html" class="nav-link">Properti</a>
+                <a href="jasa.html" class="nav-link active">Jasa</a>
+                <a href="../barang/barang.html" class="nav-link">Barang</a>
+                <a href="../rekomendasi/rekomendasi.html" class="nav-link">Rekomendasi</a>
+                <a href="#contact-section" class="nav-link btn-nav-contact">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <span class="badge">Katalog Pilihan</span>
+                <h1 class="hero-title">Temukan Jasa yang Anda Butuhkan</h1>
+                <p class="hero-subtitle">Lihat pilihan teknisi, agensi, konsultan, atau penyedia jasa secara ringkas. Cek detailnya dulu, kalau cocok langsung tanya tanpa tekanan.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="btn-scroll-katalog">Lihat Katalog</button>
+                    <button class="btn btn-outline btn-wa" data-message="Halo Vicky, saya mau tanya soal jasa yang ada di Cek Aja Dulu.">Tanya Vicky</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section" id="katalog-jasa">
+            <div class="container filter-container">
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="search-input" placeholder="Cari nama jasa atau kategori...">
+                </div>
+                <div class="filter-dropdowns">
+                    <select class="custom-select" id="filter-kategori">
+                        <option value="semua">Semua Jasa</option>
+                        <option value="service">Service / Perbaikan</option>
+                        <option value="perawatan">Perawatan / Cleaning</option>
+                        <option value="tukang">Tukang / Kontraktor</option>
+                    </select>
+                    <select class="custom-select" id="filter-urutkan">
+                        <option value="terbaru">Terbaru</option>
+                        <option value="termurah">Harga Terendah</option>
+                        <option value="termahal">Harga Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="jasa-list-section">
+            <div class="container jasa-grid" id="jasa-grid-container">
+                
+            </div>
+        </section>
+
+        <section class="trust-section">
+            <div class="container text-center">
+                <h2 class="section-title">Cek Dulu, Baru Putuskan</h2>
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-number">01</div>
+                        <h4>Info Transparan</h4>
+                        <p>Harga, spesifikasi, dan legalitas disampaikan apa adanya tanpa disembunyikan.</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-number">02</div>
+                        <h4>Tanpa Tekanan</h4>
+                        <p>Tanya-tanya dulu via WhatsApp. Tidak akan dikejar-kejar layaknya hard-selling.</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-number">03</div>
+                        <h4>Satu Pintu</h4>
+                        <p>Komunikasi ringkas dan terpusat melalui Vicky. Mudah dan tidak membingungkan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div id="contact-section" class="container">
+                <div class="cta-box">
+                    <h2>Punya keahlian atau jasa yang ingin dipasarkan?</h2>
+                    <p>Kirim detail layanan Anda ke Vicky. Kami siap bantu buatkan profil info yang rapi, menarik, dan profesional agar lebih mudah memikat calon klien atau pengguna jasa.</p>
+                    <button class="btn btn-cta btn-wa" data-message="Halo Vicky, saya mau tanya cara pasang info jasa saya di Cek Aja Dulu.">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        Chat Vicky Sekarang
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-nav-wrapper">
+            <a href="../index.html" class="btn-back">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Kembali ke Beranda Utama
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="footer-logo">Cek Aja Dulu</h3>
+                <p>Tempat mengecek pilihan menarik sebelum mengambil keputusan penting.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Eksplorasi</h4>
+                <ul>
+                    <li><a href="../properti/properti.html">Properti</a></li>
+                    <li><a href="../jasa/jasa.html">Jasa</a></li>
+                    <li><a href="../barang/barang.html">Barang</a></li>
+                    <li><a href="../rekomendasi/rekomendasi.html">Rekomendasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#contact-section">Kontak Kami</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cek Aja Dulu by Vicky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="jasa-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Tutup Detail">&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-title">Detail Jasa</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-placeholder-text">Detail jasa akan dimuat di sini. (Implementasi dinamis JS)</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-wa w-full" data-message="Halo Vicky, saya mau tanya soal jasa yang saya lihat di detail.">Tanya via WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="jasa.js"></script>
+  <script>
+window.addEventListener('DOMContentLoaded', () => {
+    // Cek apakah URL mengandung #go-to-contact
+    if (window.location.hash === '#go-to-contact') {
+        // Cari elemen target asli (#contact-section)
+        const targetElement = document.getElementById('contact-section');
+        // Cari navbar kamu (sesuaikan id/class jika berbeda, misal: 'nav-menu' atau 'header')
+        const navbar = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+
+        if (targetElement) {
+            // Jalankan fungsi setelah browser selesai loading layout penuh
+            setTimeout(() => {
+                // Hitung tinggi navbar secara dinamis (berlaku pas untuk PC & HP)
+                const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                
+                // Hitung posisi koordinat target dikurangi tinggi navbar + padding aman (20px)
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navbarHeight - 20;
+
+                // Paksa browser bergulir ke koordinat yang sudah presisi tersebut
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 300); // Delay sedikit agar browser Android tidak kaget saat kalkulasi tinggi layar
+        }
+    }
+});
+</script>
+</body>
+</html>

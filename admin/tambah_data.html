@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Tambah Data Universal</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f6f9; padding: 20px; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 8px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #1a365d; color: white; padding: 12px; border: none; width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background: #2a4d7c; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Tambah Data Baru</h2>
+    
+    <form id="formTambah" action="proses_tambah_universal.php" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label>Jenis Fitur / Modul:</label>
+            <select name="modul" required>
+                <option value="properti">Katalog Properti</option>
+                <option value="barang">Jual Barang</option>
+                <option value="jasa">Penyedia Jasa</option>
+                <option value="rekomendasi">Rekomendasi Tempat</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Nama / Judul:</label>
+            <input type="text" name="title" required placeholder="Contoh: Jasa Service AC / Rumah Type 36">
+        </div>
+
+        <div class="form-group">
+            <label>Kategori internal (Gunakan huruf kecil):</label>
+            <input type="text" name="category" required placeholder="Contoh: rumah, elektronik, service">
+        </div>
+
+        <div class="form-group">
+            <label>Status:</label>
+            <input type="text" name="status" required placeholder="Contoh: Tersedia / Buka">
+        </div>
+
+        <div class="form-group">
+            <label>Warna Badge:</label>
+            <select name="status_class">
+                <option value="status-tersedia">Hijau (Tersedia/Aktif)</option>
+                <option value="status-terbatas">Kuning (Terbatas/Pending)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Lokasi / Alamat:</label>
+            <input type="text" name="location" required>
+        </div>
+
+        <div class="form-group">
+            <label>Harga (Angka saja):</label>
+            <input type="number" name="price" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tampilan Harga di Web:</label>
+            <input type="text" name="price_display" required placeholder="Contoh: Rp 50.000">
+        </div>
+
+        <div class="form-group">
+            <label>Keterangan Waktu Harga (Opsional):</label>
+            <input type="text" name="price_period" placeholder="Contoh: /jam, /pcs, /bln">
+        </div>
+
+        <div class="form-group">
+            <label>Spesifikasi / Fitur Singkat:</label>
+            <input type="text" name="specs" required placeholder="Contoh: 🛏️ 2 KT | Garasi (Gunakan pembatas '|')">
+        </div>
+
+        <div class="form-group">
+            <label>Deskripsi Lengkap:</label>
+            <textarea name="description" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="no_wa">Nomor WhatsApp Pemilik (Gunakan kode negara, contoh: 628123456789):</label>
+            <input type="text" name="no_wa" id="no_wa" placeholder="Contoh: 628123456789" required>
+        </div>
+
+        <div class="form-group">
+            <label>Template Pesan WhatsApp:</label>
+            <textarea name="wa_message" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Gambar Utama:</label>
+            <input type="file" name="image_file" accept="image/*" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Foto Galeri Tambahan (Bisa pilih banyak sekaligus):</label>
+            <input type="file" name="gallery_images[]" multiple accept="image/*">
+            <small style="color: gray; display: block; margin-top: 3px;">Tahan tombol Ctrl untuk memilih lebih dari 1 foto.</small>
+        </div>
+        
+        <button type="submit" id="btnSubmit">Simpan Data</button>
+
+    </form>
+</div>
+
+<script>
+    document.getElementById('btnSubmit').addEventListener('click', function(e) {
+        const form = document.getElementById('formTambah');
+        if(form.checkValidity()) {
+            form.submit();
+        } else {
+            alert("Harap isi semua inputan yang wajib (required) terlebih dahulu!");
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Edit Data Universal</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f6f9; padding: 20px; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 8px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #e53e3e; color: white; padding: 12px; border: none; width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+    <h2>Form Edit Data</h2>
+    <form action="proses_edit_universal.php" method="POST" enctype="multipart/form-data">
+        
+        <input type="hidden" name="id" id="data-id">
+        <input type="hidden" name="modul" id="data-modul">
+
+        <div class="form-group">
+            <label>Nama / Judul:</label>
+            <input type="text" name="title" id="data-title" required>
+        </div>
+        <div class="form-group">
+            <label>Kategori internal:</label>
+            <input type="text" name="category" id="data-category" required>
+        </div>
+        <div class="form-group">
+            <label>Status:</label>
+            <input type="text" name="status" id="data-status" required>
+        </div>
+        <div class="form-group">
+            <label>Warna Badge:</label>
+            <select name="status_class" id="data-status-class">
+                <option value="status-tersedia">Hijau (Tersedia/Aktif)</option>
+                <option value="status-terbatas">Kuning (Terbatas/Pending)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Lokasi / Alamat:</label>
+            <input type="text" name="location" id="data-location" required>
+        </div>
+        <div class="form-group">
+            <label>Harga (Angka):</label>
+            <input type="number" name="price" id="data-price" required>
+        </div>
+        <div class="form-group">
+            <label>Tampilan Harga di Web:</label>
+            <input type="text" name="price_display" id="data-price-display" required>
+        </div>
+        <div class="form-group">
+            <label>Keterangan Waktu Harga:</label>
+            <input type="text" name="price_period" id="data-price-period">
+        </div>
+        <div class="form-group">
+            <label>Spesifikasi / Fitur Singkat:</label>
+            <input type="text" name="specs" id="data-specs" required>
+        </div>
+        <div class="form-group">
+            <label>Deskripsi Lengkap:</label>
+            <textarea name="description" id="data-description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="no_wa">Nomor WhatsApp Pemilik (Gunakan kode negara, contoh: 628123456789):</label>
+            <input type="text" name="no_wa" id="no_wa" class="form-control" placeholder="Contoh: 628123456789" required>
+        </div>
+        <div class="form-group">
+            <label>Template Pesan WhatsApp:</label>
+            <textarea name="wa_message" id="data-wa-message" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Foto Galeri Saat Ini:</label>
+            <div id="galeri-existing" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;"></div>
+        </div>
+        <div class="form-group">
+            <label>Tambah Foto Galeri Baru (bisa pilih lebih dari 1):</label>
+            <input type="file" name="gallery_images[]" accept="image/*" multiple>
+        </div>
+        <div class="form-group">
+            <label>Ganti Gambar (Kosongkan jika tidak ingin diubah):</label>
+            <input type="file" name="image_file" accept="image/*">
+        </div>
+        
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        // Ambil parameter dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const idData = urlParams.get('id');
+        const fiturData = urlParams.get('fitur') || 'properti'; // mengambil parameter ?fitur=
+
+        if (!idData) {
+            alert("ID Data tidak ditemukan!");
+            return;
+        }
+
+        try {
+            // Memanggil API sesuai fitur (properti/barang/jasa/rekomendasi)
+            const respon = await fetch(`api.php?fitur=${fiturData}&id=${idData}`);
+            const result = await respon.json();
+            const data = result.data;
+
+            // CEK DATA DAN ISI FORM
+            if (data) {
+                // Isi form otomatis dengan data lama dari database
+                document.getElementById("data-id").value = data.id;
+                document.getElementById("data-modul").value = fiturData; // otomatis terisi (properti/barang/jasa)
+                document.getElementById("data-title").value = data.title || "";
+                document.getElementById("data-category").value = data.category || "";
+                document.getElementById("data-status").value = data.status || "";
+                document.getElementById("data-status-class").value = data.status_class || "status-tersedia";
+                document.getElementById("data-location").value = data.location || "";
+                document.getElementById("data-price").value = data.price || "";
+                document.getElementById("data-price-display").value = data.price_display || "";
+                document.getElementById("data-price-period").value = data.price_period || "";
+                document.getElementById("data-specs").value = data.specs || "";
+                document.getElementById("data-description").value = data.description || "";
+                document.getElementById("no_wa").value = data.no_wa || "";
+                document.getElementById("data-wa-message").value = data.wa_message || "";
+
+                // RENDER GALERI EXISTING
+                renderGaleri(data.gallery, data.id, fiturData);
+            } else {
+                alert("Data tidak ditemukan!");
+            }
+        } catch (error) {
+            console.error("Gagal memuat data lama:", error);
+            alert("Error: " + error.message);
+        }
+    });
+
+    function renderGaleri(gallery, itemId, fitur) {
+        const wadah = document.getElementById("galeri-existing");
+        wadah.innerHTML = "";
+        
+        if (!gallery || gallery.length === 0) {
+            wadah.innerHTML = "<p style='color:#94a3b8; font-size:0.9rem;'>Belum ada foto galeri.</p>";
+            return;
+        }
+        
+        gallery.forEach(foto => {
+            const wrapper = document.createElement("div");
+            wrapper.style.cssText = "position:relative; width:100px;";
+            wrapper.id = "galeri-wrap-" + foto.id;
+            
+            wrapper.innerHTML = `
+                <img src="../uploads/${foto.image_name}" 
+                     style="width:100px; height:80px; object-fit:cover; border-radius:6px; border:1px solid #e2e8f0;">
+                <button type="button" onclick="hapusFotoGaleri(${foto.id}, '${fitur}')"
+                    style="position:absolute; top:-6px; right:-6px; background:#ef4444; color:white; 
+                           border:none; border-radius:50%; width:22px; height:22px; cursor:pointer; 
+                           font-size:14px; line-height:1; display:flex; align-items:center; justify-content:center;">
+                    &times;
+                </button>
+            `;
+            wadah.appendChild(wrapper);
+        });
+    }
+
+    async function hapusFotoGaleri(galeriId, fitur) {
+        if (!confirm("Hapus foto ini dari galeri?")) return;
+        
+        try {
+            const formData = new FormData();
+            formData.append("galeri_id", galeriId);
+            
+            const res = await fetch(`api.php?action=delete_galeri&fitur=${fitur}`, {
+                method: "POST",
+                body: formData
+            });
+            const result = await res.json();
+            
+            if (result.status === "success") {
+                document.getElementById("galeri-wrap-" + galeriId)?.remove();
+            } else {
+                alert("Gagal hapus foto: " + result.message);
+            }
+        } catch (e) {
+            console.error("Error:", e);
+            alert("Error: " + e.message);
+        }
+    }
+</script>
+
+</body>
+</html>

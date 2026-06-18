@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin Rahasia - Vicky</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f6f9; padding: 20px; }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-btn { background: #1a365d; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; font-weight: bold; margin-right: 5px; }
+        .nav-btn.add { background: #16a34a; }
+        .grid-katalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .card-img { width: 100%; height: 180px; object-fit: cover; background: #cbd5e1; }
+        .card-body { padding: 15px; }
+        .card-title { font-size: 1.1rem; font-weight: bold; margin: 0 0 10px 0; color: #1e293b; }
+        .btn-edit { display: block; text-align: center; background: #eab308; color: black; font-weight: bold; padding: 10px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="admin-header">
+    <div>
+        <h2>Dashboard Admin Rahasia</h2>
+        <a href="?fitur=properti" class="nav-btn">Katalog Properti</a>
+        <a href="?fitur=barang" class="nav-btn">Katalog Barang</a>
+        <a href="?fitur=jasa" class="nav-btn">Katalog Jasa</a>
+        <a href="?fitur=rekomendasi" class="nav-btn">Katalog Rekomendasi</a>
+    </div>
+    <a href="tambah_data.html" class="nav-btn add">➕ Tambah Data Baru</a>
+</div>
+
+<h3 id="nama-fitur">Memuat data...</h3>
+<div class="grid-katalog" id="wadah-katalog"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fiturSekarang = urlParams.get('fitur') || 'properti';
+        
+        document.getElementById("nama-fitur").innerText = "Mengelola Fitur: " + fiturSekarang.toUpperCase();
+
+        try {
+            // Panggil API di folder admin sesuai fitur yang aktif
+            const respon = await fetch(`api.php?fitur=${fiturSekarang}`);
+            const result = await respon.json();
+            const dataList = result.data;
+            const wadah = document.getElementById("wadah-katalog");
+
+            if (dataList.length === 0) {
+                wadah.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #64748b; padding: 40px;">Belum ada data di kategori ${fiturSekarang}.</p>`;
+                return;
+            }
+
+            dataList.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <img src="../uploads/${item.image_type}" class="card-img" alt="Gambar">
+                    <div class="card-body">
+                        <p style="font-size: 0.8rem; color: #ef4444; font-weight: bold; margin: 0;">${item.category.toUpperCase()}</p>
+                        <h4 class="card-title">${item.title}</h4>
+                        <p style="font-weight: bold; color: #1e3a8a; margin: 5px 0;">${item.price_display}</p>
+                        <a href="edit_data.html?id=${item.id}&fitur=${fiturSekarang}" class="btn-edit">✏️ Edit Data Ini</a>
+                    </div>
+                `;
+                wadah.appendChild(card);
+            });
+
+        } catch (error) {
+            console.error("Gagal mengambil data admin:", error);
+        }
+    });
+</script>
+
+</body>
+</html>

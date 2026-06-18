@@ -1,0 +1,709 @@
+/* =========================================
+   DESIGN SYSTEM & VARIABLES
+   ========================================= */
+   :root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --primary-navy: #0f172a;
+    --primary-hover: #1e293b;
+    --border-color: #e2e8f0;
+    --accent-green: #10b981;
+    --accent-green-bg: #ecfdf5;
+    --accent-orange: #f59e0b;
+    --accent-orange-bg: #fffbeb;
+    
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 999px;
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    
+    --nav-height: 70px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* 1. Mengaktifkan smooth scroll pada seluruh halaman */
+html {
+  scroll-behavior: smooth;
+  
+  /* 2. ANTI-BUG HEADER: 
+     Memberikan jarak aman di bagian atas agar saat scroll ke ID tertentu, 
+     kontennya tidak tertutup oleh navbar/header yang posisinya 'fixed' atau 'sticky'.
+     (Ganti 80px dengan tinggi navbar web kamu) */
+  scroll-padding-top: 80px; 
+  
+  /* Opsional: Mencegah efek "memantul" (bounce) di browser mobile 
+     saat scroll mentok di paling atas atau bawah */
+  overscroll-behavior-y: none;
+}
+html, body {
+    /* 'auto' memastikan fitur pull-to-refresh bawaan browser mobile tetap bekerja */
+    overscroll-behavior-y: auto; 
+    
+    /* Pastikan kamu tidak tidak mematikan scroll secara tidak sengaja */
+    overflow-y: scroll; 
+    -webkit-overflow-scrolling: touch; /* Biar scroll di iPhone/Safari terasa mulus */
+}
+
+/* 3. ANTI-BUG AKSESIBILITAS: 
+   Mendeteksi jika pengguna mematikan animasi di sistem operasi mereka 
+   (misalnya karena alasan kesehatan/pusing). Ini adalah standar web yang baik. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* =========================================
+   TYPOGRAPHY & BUTTONS
+   ========================================= */
+h1, h2, h3, h4 {
+    color: var(--primary-navy);
+    line-height: 1.3;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-navy);
+    color: var(--bg-card);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-navy);
+    border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-navy);
+    background-color: var(--bg-card);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.w-full { width: 100%; }
+
+/* =========================================
+   NAVBAR (PREMIUM & STICKY)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-navy);
+    font-weight: 700;
+}
+
+.btn-nav-contact {
+    background-color: var(--primary-navy);
+    color: #fff !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-navy);
+    transition: var(--transition);
+}
+
+/* =========================================
+   HERO SECTION (COMPACT)
+   ========================================= */
+.hero-section {
+    padding: calc(var(--nav-height) + 3rem) 0 3rem;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* =========================================
+   FILTER & SEARCH
+   ========================================= */
+.filter-section {
+    padding: 1rem 0 2rem;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    background: var(--bg-card);
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--bg-main);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+}
+
+.search-box:focus-within {
+    border-color: var(--primary-navy);
+    background: var(--bg-card);
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-select {
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+/* =========================================
+   PROPERTY GRID & CARDS
+   ========================================= */
+.jasa-list-section {
+    padding: 1rem 0 4rem;
+}
+
+.jasa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.jasa-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.jasa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--text-muted);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+}
+
+.status-tersedia {
+    left: 1rem;
+    background: var(--accent-green-bg);
+    color: var(--accent-green);
+}
+
+.status-terbatas {
+    left: 1rem;
+    background: var(--accent-orange-bg);
+    color: var(--accent-orange);
+}
+
+.category-label {
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-navy);
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-location {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.card-price {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.price-period {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.card-specs {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+/* =========================================
+   TRUST SECTION
+   ========================================= */
+.trust-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.trust-card {
+    text-align: left;
+    padding: 2rem;
+    background: var(--bg-main);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.trust-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.trust-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.trust-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SINGLE PREMIUM CTA (CLEAN, NO BUGS)
+   ========================================= */
+.cta-section {
+    padding: 4rem 0;
+}
+
+.cta-box {
+    background: var(--primary-navy);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-box h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    color: #cbd5e1; /* slate-300 */
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+}
+
+.btn-cta {
+    background: white;
+    color: var(--primary-navy);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn-cta:hover {
+    background: #f1f5f9;
+}
+
+/* =========================================
+   BACK NAV WRAPPER
+   ========================================= */
+.back-nav-wrapper {
+    padding: 2rem 0 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-navy);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background: white;
+    border-top: 1px solid var(--border-color);
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    max-width: 300px;
+}
+
+.footer-links h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-navy);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   MODAL DETAIL (BUG-FREE)
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: relative;
+    transform: scale(0.95);
+    transition: var(--transition);
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--primary-navy);
+}
+
+.modal-header { margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+.modal-body { margin-bottom: 2rem; color: var(--text-muted); }
+
+/* =========================================
+   RESPONSIVE MOBILE FIRST ADJUSTMENTS
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        /* Efek animasi menutup */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease-in-out;
+    }
+    
+    /* Muncul saat active */
+    .nav-menu.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .hamburger { 
+        display: flex; 
+    }
+        
+    /* Animasi tombol Hamburger jadi huruf X saat dibuka */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .hero-title { font-size: 2rem; }
+    .hero-actions { flex-direction: column; }
+    
+    .filter-container { flex-direction: column; }
+    .filter-dropdowns { flex-direction: column; }
+    
+    .trust-grid { grid-template-columns: 1fr; }
+    
+    .cta-box { padding: 3rem 1.5rem; }
+    .cta-box h2 { font-size: 1.5rem; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}

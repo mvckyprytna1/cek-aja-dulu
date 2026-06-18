@@ -1,0 +1,203 @@
+[02-Jun-2026 22:49:08 Asia/Jakarta] PHP Warning:  move_uploaded_file(uploads/6a1efb74ed9b0.png): Failed to open stream: No such file or directory in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_gambar_properti.php on line 53
+[02-Jun-2026 22:49:08 Asia/Jakarta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprBDgAA' to 'uploads/6a1efb74ed9b0.png' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_gambar_properti.php on line 53
+[02-Jun-2026 23:16:44 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:16:48 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:16:50 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:16:50 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:16:51 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:16:51 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'WHERE' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:16
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 16
+[02-Jun-2026 23:23:09 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'vicj7142_namaUserDatabaseKamu'@'localhost' (using password: YES) in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php:10
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php(10): mysqli_connect()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 10
+[03-Jun-2026 01:20:39 Asia/Jakarta] PHP Warning:  include(koneksi.php): Failed to open stream: No such file or directory in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:39 Asia/Jakarta] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:39 Asia/Jakarta] PHP Warning:  Undefined variable $koneksi in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:20:39 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:49
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(49): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:20:47 Asia/Jakarta] PHP Warning:  include(koneksi.php): Failed to open stream: No such file or directory in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:47 Asia/Jakarta] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:47 Asia/Jakarta] PHP Warning:  Undefined variable $koneksi in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:20:47 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:49
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(49): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:20:49 Asia/Jakarta] PHP Warning:  include(koneksi.php): Failed to open stream: No such file or directory in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:49 Asia/Jakarta] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 34
+[03-Jun-2026 01:20:49 Asia/Jakarta] PHP Warning:  Undefined variable $koneksi in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:20:49 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php:49
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php(49): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 49
+[03-Jun-2026 01:35:13 Asia/Jakarta] PHP Warning:  Undefined variable $conn in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 01:35:13 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php:6
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php(6): mysqli_real_escape_string()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 01:35:20 Asia/Jakarta] PHP Warning:  Undefined variable $conn in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 01:35:20 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php:6
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php(6): mysqli_real_escape_string()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 01:37:59 Asia/Jakarta] PHP Warning:  Undefined variable $conn in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 01:37:59 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php:6
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php(6): mysqli_real_escape_string()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 6
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "modul" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 15
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "title" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 16
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "category" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 17
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "status" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 18
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "status_class" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 19
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "location" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 20
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "price" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 21
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "price_display" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 22
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "price_period" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 23
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "specs" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 24
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "description" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 25
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "no_wa" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 26
+[03-Jun-2026 02:49:33 Asia/Jakarta] PHP Warning:  Undefined array key "wa_message" in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 27
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 16:26:50 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 16:35:57 Asia/Jakarta] PHP Parse error:  Unclosed '{' on line 117 in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 163
+[03-Jun-2026 16:35:57 Asia/Jakarta] PHP Parse error:  Unclosed '{' on line 117 in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 163
+[03-Jun-2026 16:36:20 Asia/Jakarta] PHP Parse error:  Unclosed '{' on line 117 in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/api.php on line 163
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 16:41:12 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 16:41:22 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 16:50:59 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 17:00:00 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $title in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 26
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $category in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 27
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $status in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 28
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $status_class in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 29
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $location in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 30
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $price in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 31
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $price_display in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 32
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $price_period in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 33
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $specs in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 34
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $description in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 35
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $no_wa in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 36
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $wa_message in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 37
+[03-Jun-2026 17:00:20 Asia/Jakarta] PHP Warning:  Undefined variable $query_image_part in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_edit_universal.php on line 38
+[03-Jun-2026 23:38:27 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'INSERT INTO' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:41
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(41): mysqli_query()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 41
+[03-Jun-2026 23:40:06 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'INSERT INTO' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:77
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(77): mysqli_prepare()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 77
+[03-Jun-2026 23:46:46 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'INSERT INTO' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:80
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(80): mysqli_prepare()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 80
+[03-Jun-2026 23:48:10 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'INSERT INTO' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:80
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(80): mysqli_prepare()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 80
+[03-Jun-2026 23:52:19 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'modul' in 'INSERT INTO' in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:80
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(80): mysqli_prepare()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 80
+[08-Jun-2026 00:02:46 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: No such file or directory in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php:13
+Stack trace:
+#0 /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php(13): mysqli_connect()
+#1 {main}
+  thrown in /home/vicj7142/public_html/cek.vickydisini.my.id/admin/proses_tambah_universal.php on line 13
